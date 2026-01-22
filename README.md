@@ -1,6 +1,12 @@
 Assignment 1 - Hello World: GitHub and d3  
 ===
 
+Sources:
+https://observablehq.com/@nyuvis/d3-introduction 
+https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/circle 
+https://www.w3schools.com/js/js_arrays.asp 
+https://d3js.org/d3-selection/events 
+
 This is a starting project to make sure you can write and host a webpage that generates graphics using d3. 
 
 The primary goal is to be able to generate graphics primitives (circles, rectangles, lines, polygons) at different locations on the screen with different colors. 

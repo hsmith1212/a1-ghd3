@@ -8,7 +8,7 @@
   // Add an SVG. Referenced https://observablehq.com/@nyuvis/d3-introduction 
 
   const svg = d3.create('svg')
-      .attr('width', 500)
+      .attr('width', 1500)
       .attr('height', 750);
 
   //adding the back of the stoplight
@@ -54,11 +54,53 @@
       .attr('y2',650)
       .attr('stroke','black') 
       .attr('stroke-width', '6')
+
+  //adding a car to the svg
+  //learned how to add image from github here: https://github.com/mrdbourke/pytorch-deep-learning/discussions/530 
+  //car from: https://www.freepik.com/free-vector/red-sedan-car-cartoon-style-isolated-white-background_18212304.htm#fromView=keyword&page=1&position=1&uuid=dda10481-31f4-44ff-a5d7-3de7ad8ffda7&query=Simple+car+clipart
+  svg.append('image')
+    .attr('href', 'https://raw.githubusercontent.com/hsmith1212/a1-ghd3/ab39d82ce67342bd22e3dadbe2dac36944dfa29b/car.jpg')
+    .attr('x', 250)
+    .attr('y', 250)
+    .attr('width', 800)
+    .attr('height', 400);
+
+  //adding tires over the car
+  //tire from: https://creazilla.com/media/clipart/23311/simple-car-wheel-tire-side-view 
+  svg.append('image')
+    .attr('id', 'left-tire')
+    .attr('href', 'https://raw.githubusercontent.com/hsmith1212/a1-ghd3/08da133317e75f7245356aea32160683b3d59582/tire.png')
+    .attr('x', 347)
+    .attr('y', 500)
+    .attr('width', 140)
+    .attr('height', 140);
   
+  svg.append('image')
+    .attr('id', 'right-tire')
+    .attr('href', 'https://raw.githubusercontent.com/hsmith1212/a1-ghd3/08da133317e75f7245356aea32160683b3d59582/tire.png')
+    .attr('x', 740)
+    .attr('y', 500)
+    .attr('width', 140)
+    .attr('height', 140);
 
   //used Copilot AI to debug and learned I needed to include this line. Spent a lot of time
   //thinking my code was wrong but really I just wasn't sending it to the container
   d3.select("#container").append(() => svg.node());
+
+  //rotating tires function and variables
+  //NOTE: at first I tried to use "const" instead of "let" and I debugged this specific function with Copilot, and
+  //it corrected me to use let instead
+  let rotateSpeed = 0;
+  let angle = 0;
+
+  d3.timer(() => {
+    angle += rotateSpeed;
+    svg.select('#left-tire')
+      .attr('transform', `rotate(${angle}, 417, 570)`);
+    svg.select('#right-tire')
+      .attr('transform', `rotate(${angle}, 810, 570)`);
+  });
+
 
 
   //adding animation so that each circle can be clicked; referenced https://d3js.org/d3-selection/events
@@ -74,6 +116,8 @@
           .text('Go!')
           .attr('font-size', '30px')
           .attr('fill', 'green');
+        //rotate tires
+        rotateSpeed = -5;
       } else if (circle.attr('fill') == 'yellow') {
         //say slow down
         svg.append('text')
@@ -82,6 +126,8 @@
           .text('Slow Down!')
           .attr('font-size', '30px')
           .attr('fill', 'orange');
+        //slowly rotate tire
+        rotateSpeed = -2;
       } else if (circle.attr('fill') == 'red') {
         //say stop
         svg.append('text')
@@ -90,6 +136,8 @@
           .text('Stop!')
           .attr('font-size', '30px')
           .attr('fill', 'red');
+        //set tire rotation to 0
+        rotateSpeed = 0;
       }
     } );
 

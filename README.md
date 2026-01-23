@@ -5,7 +5,13 @@ Link to gh-pages site: https://hsmith1212.github.io/a1-ghd3/
 
 My Visualization
 ==
-For this assignment, I created a visualization including a stoplight and car. The stoplight is made of a rectangle, three circles, and a line. The car is a piece of clipart I found online and cited below. Additionally, I put two tire images over the car, also cited below. 
+For this assignment, I created a visualization including a stoplight and car. The stoplight is made of a rectangle, three circles, and a line. The car is a piece of clipart I found online and cited below. Additionally, I put two tire images over the car, also cited below. An image of the visualization before any interaction is below.
+
+<img width="1341" height="862" alt="image" src="https://github.com/user-attachments/assets/63d4707f-d8a0-465f-9d6e-39a874bcfd6d" />
+
+The visualization responds to user interaction as well. Any of the three stoplights can be clicked, and in response, a word next to each of the stoplights will appear: "Go!" when green is clicked, "Slow Down!" when yellow is clicked, and "Stop!" when red is clicked. At the same time, the rotation speed of the tires will change if the clicked light is different than the previously clicked one. Hitting red will stop any rotation, hitting yellow will set them to a slow rotation, and hitting green will set them to a steady rotation. A video of this animation is below.
+
+https://github.com/user-attachments/assets/8479501a-43d0-457c-a119-7d54c4df86d8
 
 Technical Achievements
 ==

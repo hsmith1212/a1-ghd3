@@ -14,18 +14,21 @@ The visualization responds to user interaction as well. Any of the three stoplig
 https://github.com/user-attachments/assets/8479501a-43d0-457c-a119-7d54c4df86d8
 
 Technical Achievements
-==
+=
 
 My biggest technial achievement included my use of animation in my visualization. I had to do research into how to keep the animation constantly running, not just call transform one time on the tires. My tires are constantly being animated using the timer function from d3. I learned how to change the speed of this animation using event listeners on the stoplights. 
 Another technical achievement of mine is my use of an array to create the circles of the stoplight. Rather than manually creating three different circles, I made an array of circles and joins to create all three circles in one section of my code.
 
 Design Achievements
-==
+=
 
-
+1. Created a recognizeable stop light out of simple shapes
+2. Used overlapping clipart images to make it look like the wheels of the tire rotate
+3. The stoplight is interactive, causing text to appear and a change in the rotation of the wheels depending on which is clicked
+4. The tires turn as in the direction of the stoplight, appearing like the car's driving is reacting directly to the stoplight
 
 Sources for Coding Assistance
-==
+=
 * https://observablehq.com/@nyuvis/d3-introduction
   * This was the first source I consulted, and where I was inspired to do the array of circles. I used the code here to learn how to display an array of svg shapes. I edited the code to be three circles vertically stacked, with different colors, to repersent a traffic light.
 * https://www.w3schools.com/js/js_arrays.asp 
@@ -38,6 +41,6 @@ Sources for Coding Assistance
   * This showed me how to get my images I uploaded to GitHub into my actual code. 
 
 Image Sources
-==
+=
 * Car: https://www.freepik.com/free-vector/red-sedan-car-cartoon-style-isolated-white-background_18212304.htm#fromView=keyword&page=1&position=1&uuid=dda10481-31f4-44ff-a5d7-3de7ad8ffda7&query=Simple+car+clipart
 * Tire: https://creazilla.com/media/clipart/23311/simple-car-wheel-tire-side-view 

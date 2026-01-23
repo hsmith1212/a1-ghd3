@@ -16,8 +16,13 @@ https://github.com/user-attachments/assets/8479501a-43d0-457c-a119-7d54c4df86d8
 Technical Achievements
 ==
 
+My biggest technial achievement included my use of animation in my visualization. I had to do research into how to keep the animation constantly running, not just call transform one time on the tires. My tires are constantly being animated using the timer function from d3. I learned how to change the speed of this animation using event listeners on the stoplights. 
+Another technical achievement of mine is my use of an array to create the circles of the stoplight. Rather than manually creating three different circles, I made an array of circles and joins to create all three circles in one section of my code.
+
 Design Achievements
 ==
+
+
 
 Sources for Coding Assistance
 ==
